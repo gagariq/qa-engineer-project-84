@@ -659,7 +659,7 @@
     requirement: |
       Пользователь может изменить версию сайта на русский язык
     prerequisites: |
-      Открыт сайт  https://hexlet-products-store.vercel.app/products/1
+      Открыт сайт  https://hexlet-products-store.vercel.app/
     test-data: |
     steps:
       - Нажать "Languge"
@@ -672,7 +672,7 @@
     requirement: |
       Пользователь может изменить версию сайта на английский язык 
     prerequisites: |
-      - Открыт сайт  https://hexlet-products-store.vercel.app/products/1
+      - Открыт сайт  https://hexlet-products-store.vercel.app/
       - Интерфейс языка - русский
     test-data: |
     steps:
@@ -680,5 +680,18 @@
       - Нажать "English"
     expected-result: |
       Интерфейс сайта переключился на английский язык
+      
+  - summary: | 
+      Проверка конвертации "доллар" в "рубль" при изменении языка
+    requirement: |
+      При переключении языка на русский, цена должна отображаться в рублях 
+    prerequisites: |
+      Открыт сайт  https://hexlet-products-store.vercel.app/
+    test-data: |
+    steps:
+      - Нажать "Language"
+      - Нажать "Russian"
+    expected-result: |
+      Цена товаров на странице отображается в рублях
       
       
