@@ -273,14 +273,12 @@
     requirement: |
       Сайт должен иметь мобильную версию
     prerequisites: |
-      - Открыт сайт https://hexlet-products-store.vercel.app/
       - Открыт сайт Browser Stack https://live.browserstack.com/
       - Пользователь авторизован на сайте Browser Stack
     test-data: |
     steps:
       - Выбрать категории "iOS => iPhone => iPhone 12 => Нажать Safari"
-      - Скопировать URL приложения
-      - Вставить URL сайта в поле "Введите URL" на сайте Browser Stack
+      - Ввести https://hexlet-products-store.vercel.app/ в адресную строку Browser Stack
       - Нажать "Enter"
     expected-result: |
       На экран выводится корректно сверстанный сайт, функциональность основных кнопок работает
