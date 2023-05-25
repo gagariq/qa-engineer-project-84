@@ -1,382 +1,775 @@
 ---
 test-cases:
   - summary: |
-      Проверка поиска товара по ключевому слову "Laptop" 
-    status: pass
-
-bugreports: [] 
-      
+      Успешный поиск товара на открытой странице по ключевому слову 
+    status: fail
+    
 test-cases:
   - summary: |
-      Проверка поиска товара по ключевому слову "Bed" 
+      Успешный поиск товара на всех страницах по ключевому слову  
+    status: fail
+    
+test-cases:    
+  - summary: |
+      Проверка фильтрации на странице по категории "smartphones" 
+    status: pass
+
+test-cases: 
+  - summary: |
+      Проверка фильтрации  по категории "Skincare"
+    status: pass  
+ 
+test-cases: 
+  - summary: |
+      Проверка фильтрации  товаров по категории "tops"
+    status: pass
+
+test-cases: 
+  - summary: |
+      Проверка фильтрации товаров по цене "От - До" с целыми числами
+    status: pass
+
+test-cases: 
+  - summary: |
+      Проверка фильтрации  товаров по цене "От" с целым числом
+    status: pass
+
+test-cases: 
+  - summary: |
+      Проверка фильтрации товаров по цене "От" с дробным числом
+    status: pass
+
+test-cases: 
+  - summary: |
+      Проверка фльтрации товаров по цене "До" с целым числом
+    status: pass
+    
+test-cases:   
+  - summary: |
+      Проверка фльтрации товаров по цене "До" с дробным числом
+    status: pass
+
+test-cases: 
+  - summary: |
+      Проверка добавления товара в корзину
+    status: pass
+    
+test-cases:   
+  - summary: |
+      Проверка просмотра содержимого корзины
+    status: pass
+    
+test-cases:   
+  - summary: |
+      Проверка детализации информации о товаре
+    status: pass
+
+test-cases: 
+  - summary: |
+      Проверка адаптивности на Iphone 12 Pro
+    status: fail
+ 
+test-cases: 
+  - summary: |
+      Проверка адаптивности на Ipad Pro
+    status: pass
+
+test-cases: 
+  - summary: |
+      Проверка адаптивности на Galaxy Note 3
     status: fail
 
-bugreports:
+test-cases: 
   - summary: |
-      Фильтрация товаров по ключевому слову не происходит 
+      Проверка адаптивности на Galaxy S9+
+    status: fail
+  
+test-cases: 
+  - summary: |
+      Провекрка на наличие мобильной версии
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка сайта на использование протокола HTTPS
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка сайта на уязвимость XSS-атак
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка работы сайта под нагрузкой 
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка работы сайта в браузере "Firefox" 
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка работы сайта в браузере "Safari"
+    status: pass
+
+test-cases: 
+  - summary: |
+      Проверка работы сайта в браузере "Chrome"
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка работы сайта в браузере "Yandex"
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка работы сайта в браузере "Opera"
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка работы сайта в браузере "Edge"
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка работы сайта в браузере "Internet Explorer"
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка кнопки навигации "Следующий" 
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка кнопки навигации "Предыдущий" 
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка фильтрации товара по производителю Apple
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка фильтрации товара по производителю Rubber
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка фильтрации товара по производителю Dadawu
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка очистки корзины после заказа
+    status: fail
+  
+test-cases: 
+  - summary: |
+      Проверка удаления товара из корзины
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка изображений в карточке товара
+    status: pass
+  
+test-cases: 
+  - summary: |
+      Проверка переключения языка на русский
+    status: pass 
+  
+test-cases: 
+  - summary: |
+      Проверка переключения языка на английский
+    status: pass 
+  
+test-cases: 
+  - summary: |
+      Проверка конвертации "доллар" в "рубль" при изменении языка
+    status: fail
+  
+bugreports: 
+  - summary: |
+      На страницу выводятся не все товары при поиске 
     environment: |
       Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
       MacOS Ventura 13.0.1 
     steps-to-reproduce: |
-      1. Открыть главную страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      2. Выбрать английский язык
-      3. В поле "Search" ввести слово "Bed"
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. В поле "Search" ввести "Laptop"
     expected-result: |
-      На экран выводятся все товары магазина, содержащие в названии или описании карточки товара слово "Bed"
+      На экран выводятся все товары на странице со словом "Laptop" в названии товара
     actual-result: |
-      На экран не выводятся нужные товары
+      На экран выводится только один товар
       
-test-cases:
+bugreports: 
   - summary: |
-      Проверка поиска товара по категории
-    status: pass
-
-bugreports: []
-         
-test-cases:
-  - summary: |
-      Проверка фильтрации товаров по цене
-    status: pass
-
-bugreports: []
-   
-test-cases:
-  - summary: |
-      Проверка фильтрации товара по цвету
-    status: fail
-
-bugreports:
-  - summary: |
-      Отсутствует функциональность фильтрации 
+      Пустая строка в "Category"
     environment: |
       Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
       MacOS Ventura 13.0.1 
     steps-to-reproduce: |
-      1. Открыть главную страницу магазина https://hexlet-products-store.vercel.app/
-      2. Нажать на форму для фильтрации "Цвет"
-      3. В выпадающем списке нажать на значение "Черный"
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Нажать "Categories"
     expected-result: |
-      На экран выводится список товаров черного цвета, либо содержащие в карточке товара возможность выбора цвета со значением "Черный"
+      Все строки заполнены значениями
+    actual-result: |
+      Верхняя строка пустая
+      
+bugreports: 
+  - summary: |
+      При выборе категории пропадают кнопки навигации
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Нажать "Category"
+      3. Нажать "Smartphones"
+    expected-result: |
+      Кнопки навигации по страницам остаются на месте
+    actual-result: |
+      Кнопки навигации по страницам  исчезают
+      
+bugreports: 
+  - summary: |
+      Лишние символы в колонке "Количество" в корзине пользователя
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/products/1
+      2. Нажать "Add to cart"
+      3. Нажать "Cart"
+    expected-result: |
+      Рядом с колличеством товара в заказе пусто  
+    actual-result: |  
+      Рядом с колличеством товара в заказе стоят символы "qty" (screen10)
+      
+bugreports: 
+  - summary: |
+      Товар не удаляется из корзины при нажатии кнопки "Clear cart"
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/products/1
+      2. Нажать "Add to cart"
+      3. Нажать "Cart"
+      4. Нажать "Clear cart"
+      5. Нажать "Store"
+      6. Нажать "Cart"
+    expected-result: |
+      В корзине пусто 
+    actual-result: |  
+      В корзине находится удаленный товар  
+      
+bugreports: 
+  - summary: |
+      Значения списка "Категория" не переводится на русский язык
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Нажать "Category"
+      3. Нажать "Language" в футере сайта
+      4. Нажать "Russian"
+    expected-result: |
+      Список категорий перевелся на русский язык
+    actual-result: |  
+      Список категорий остался на английском языке (screen11)
+      
+bugreports: 
+  - summary: |
+      Изображение  Samsung Universe 9 не соответствует действительности
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/products/3
+    expected-result: |
+      На изображении - смартфон Samsung Universe 9
+    actual-result: |  
+      На изображении другой смартфон
+      
+bugreports: 
+  - summary: |
+      Кнопка "Previous" смещается вверх при поиске товара
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Нажать "Next"
+      3. Ввести "Bed" в поле "Search"
+    expected-result: |
+      Кнопка "Previous" внизу сайта остается на месте 
+    actual-result: |
+      Кнопка "Previous" смещается наверх (screen12)
+      
+bugreports: 
+  - summary: |
+      Поле "Search" изменяется при вводе текста
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Нажать "Next"
+      3. Ввести "Bed" в поле "Search"
+    expected-result: |
+      Поле "Search" не меняет своих размеров 
+    actual-result: |
+      Поле "Search" изменяет размер (screen12)   
+      
+bugreports:
+  - summary: |
+      Нет функции "Сортировать по цвету"
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/ 
+      2. Проскроллить страницу
+    expected-result: |
+      На сайте есть форма для фильтрации товара по цвету
     actual-result: |
       На сайте отсутствует форма для фильтрации товара по цвету
       
-test-cases:
+bugreports:  
   - summary: |
-      Проверка фильтрации товара по размеру
-    status: fail
-
-bugreports:
-  - summary: |
-      Отсутствует функциональность фильтрации 
+      Нет функции "Сортирвать по размеру"
     environment: |
       Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
       MacOS Ventura 13.0.1 
     steps-to-reproduce: |
-      1. Открыть главную страницу магазина со списком товаров https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      2. Выбрать язык интерфейса - английский
-      3. Нажать на форму для фильтрации "Size" с чекбоксами "S", "M", "L", "XL", "XXL" 
-      4. Выбрать любое значение чекбокса
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/ 
+      2. Проскроллить страницу
     expected-result: |
-      На экран выводятся отфильтрованные товары по значению в чекбоксе
+      На сайте есть форма для фильтрации товара по размеру 
     actual-result: |
       На сайте отсутствует форма для фильтрации товара по размеру
-
-test-cases:
+      
+bugreports: 
   - summary: |
-      Добавление товара в корзину 
-    status: pass
+      Отсутствует регистрация в приложении
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/ 
+      2. Добавить любой товар в корзину
+      3. Перейти в "Корзина" / "Cart"
+      4. Нажать  "Оформить заказ" / "Chekout"
+    expected-result: |
+      В хэдере сайта есть кнопка "Регистрация" ИЛИ
+      При офрмлении заказа появляется окно с требованием о регистрации
+    actual-result: |
+      В хэдере сайта отсутствет кнопка "Регистрация" И
+      При оформлении заказа приложение не запрашивает регистрацию  
+    
+bugreports:
+  - summary: |
+      Отсутствует авторизация в приложении
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/  
+    expected-result: |
+      На  есть кнопка "Войти" с формой для авторизации пользователя
+    actual-result: |
+      На сайте нет кнопки "Войти" с формой для авторизации пользователя
+     
+bugreports:  
+  - summary: |
+      Отсутствие постраничной навигации по списку 
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/  
+    expected-result: |
+      На сайте располагаются функциональные кнопки навигации по списку товаров в виде "1, 2, 3, ..."
+    actual-result: |
+      На сайте отсутствует постраничная навигация по списку товаров
+    
+bugreports:
+  - summary: |
+      Приложение не адаптивно для IPhone 12 Pro
+    environment: |
+      Google Chrome 111.0.5563.110 (Официальная сборка), (arm64)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/ 
+      2. Открыть DevTools 
+      3. Нажать  "Dimensions"
+      4. Выбрать  IPhone 12 Pro 
+    expected-result: |
+      Внешний вид критично не отличается от веб-версии сайта, элементы страницы расположены удобно
+    actual-result: |
+      Внешний вид приложения заметно меняется, становится сложно читаемым; 
+      Элементы страницы располагаются некорректно 
 
-bugreports:[]
+bugreports:
+  - summary: |
+      Приложение не адаптивно для Galaxy Note 3
+    environment: |
+      Google Chrome 111.0.5563.110 (Официальная сборка), (arm64)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/  
+      2. Открыть DevTools 
+      3. Нажать  "Dimensions"
+      4. Выбрать  Galaxy Note 3
+    expected-result: |
+      Внешний вид критично не отличается от веб-версии сайта, элементы страницы расположены удобно
+    actual-result: |
+      Внешний вид приложения заметно меняется, становится сложно читаемым; 
+      Элементы страницы располагаются некорректно
  
-test-cases:
-  - summary: |
-      Просмотр содержимого корзины
-    status: pass
-
-bugreports:[]
-  
-test-cases:
-  - summary: |
-       Детализация информации о товаре
-    status: pass
-
-bugreports:[]
-
-test-cases:
-  - summary: |
-       Проверка адаптивности сайта с мобильными устройствами
-    status: fail
-
 bugreports:
   - summary: |
-      Приложение не адаптировано для мобильных устройств 
+      Приложение не адаптивно для Galaxy S9+
     environment: |
       Google Chrome 111.0.5563.110 (Официальная сборка), (arm64)
       MacOS Ventura 13.0.1 
     steps-to-reproduce: |
-      1. Открыть главную страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/  
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/ 
       2. Открыть DevTools 
-      3. Нажать на кнопку "Dimensions"
-      4. Выбрать девайс IPhone 12 Pro  
+      3. Нажать "Dimensions"
+      4. Выбрать Galaxy S9+
     expected-result: |
-      Внешний вид приложения должен быть неизменным при использовании девайса
+      Внешний вид критично не отличается от веб-версии сайта, элементы страницы расположены удобно
     actual-result: |
-      Внешний вид приложения заметно меняется, становится сложно читаемым; элементы страницы располагаются некорректно (screen 6)
-      
-test-cases:
-  - summary: |
-       Проверка адаптивности сайта с мобильными устройствами
-    status: pass
-
-bugreports:[]
-
-test-cases:
-  - summary: |
-       Проверка адаптивности сайта с мобильными устройствами
-    status: fail
-
-bugreports:
-  - summary: |
-       Приложение не адаптировано для мобильных устройств 
-    environment: |
-      Google Chrome 111.0.5563.110 (Официальная сборка), (arm64)
-      MacOS Ventura 13.0.1 
-    steps-to-reproduce: |
-      1. Открыть главную страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      2. Открыть DevTools 
-      3. Нажать на кнопку "Dimensions"
-      4. Выбрать девайс Galaxy Note 3 
-    expected-result: |
-      Внешний вид приложения должен быть неизменным при использовании девайса
-    actual-result: |
-      Внешний вид приложения заметно меняется, становится сложно читаемым; элементы страницы располагаются некорректно (screen7)
-      
-test-cases:
-  - summary: |
-       Проверка адаптивности сайта с мобильными устройствами
-    status: fail
-
-bugreports:
-  - summary: |
-       Приложение не адаптировано для мобильных устройств 
-    environment: |
-      Google Chrome 111.0.5563.110 (Официальная сборка), (arm64)
-      MacOS Ventura 13.0.1 
-    steps-to-reproduce: |
-      1. Открыть главную страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/ 
-      2. Открыть DevTools 
-      3. Нажать на кнопку "Dimensions"
-      4. Выбрать девайс Galaxy S9+ 
-    expected-result: |
-      Внешний вид приложения должен быть неизменным при использовании девайса
-    actual-result: |
-      Внешний вид приложения заметно меняется, становится сложно читаемым; элементы страницы располагаются некорректно (screen8)
-      
-test-cases:
-  - summary: |
-       Проверка сайта на доступность мобильной версии
-    status: pass
-
-bugreports:[]
-
-test-cases:
-  - summary: |
-       Проверка сайта на безопасность
-    status: pass
-
-bugreports:[]
+      Внешний вид приложения заметно меняется, становится сложно читаемым; элементы страницы располагаются некорректно
    
-test-cases:
-  - summary: |
-      Проверка работоспособности сайта при нагрузке
-    status: pass
-
-bugreports:[]
- 
-    
-test-cases:
-  - summary: |
-      Проверка сайта на кроссбраузерность 
-    status: pass
-
-bugreports:[]
-    
-test-cases:
-  - summary: |
-      Проверка регистрации на сайте
-    status: fail
-
 bugreports:
   - summary: |
-       Некорректная форма для регистрации в приложении интернет-магазина 
+      В поле "От" можно ввести буквы русского алфавита
     environment: |
-      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      Google Chrome 111.0.5563.110 (Официальная сборка), (arm64)
       MacOS Ventura 13.0.1 
     steps-to-reproduce: |
-      1. Открыть главную страницу сайта со списком товаров
-      2. Нажать на кнопку "Log in to comment" внизу страницы
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/ 
+      2. Ввести в поле "От" значение "абвг"
     expected-result: |
-      Появилась форма для регистрации в приложении интернет магазина
+      Символы автоматически удаляются при написании
     actual-result: |
-      На экран выводится форма для регистрации в другом приложении (Vercel)(screen9)
+      В поле "От" написано "абвг"
       
-test-cases:
+bugreports:   
   - summary: |
-      Проверка авторизации на сайте
-    status: fail
-
-bugreports:
-  - summary: |
-       Отсутствует функция авторизации 
+      В поле "От" можно ввести буквы английского алфавита
     environment: |
-      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      Google Chrome 111.0.5563.110 (Официальная сборка), (arm64)
       MacOS Ventura 13.0.1 
     steps-to-reproduce: |
-      1. Открыть главную страницу сайта со списком товаров
-      2. Нажать на кнопку "Войти" в хэдере сайта
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/  
+      2. Ввести в поле "От" значение "zbh"
     expected-result: |
-      На экран выводится форма с полями для авторизации в приложении интернет-магазина
+      Символы автоматически удаляются при написании
     actual-result: |
-      Отсутствует функциональная конпка "Войти", перенаплавляющая в форму авторизации
+      В поле "От" написано "zbh"
       
-test-cases:
+bugreports:    
   - summary: |
-      Проверка удобства навигации по приложеню
-    status: fail
-
-bugreports:
-  - summary: |
-       Отсутствие кнопок навигации по страницам со списком товаров
+      В поле "От" можно ввести спецсимволы
     environment: |
-      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      Google Chrome 111.0.5563.110 (Официальная сборка), (arm64)
       MacOS Ventura 13.0.1 
     steps-to-reproduce: |
-      1. Открыть главную страницу магазина со списком товаров
-      2. На странице есть кнопки навигации по товарам с указанием страниц 
-      3. Нажать на кнопку "3"
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/  
+      2. Ввести в поле "От" значение ";-+="
     expected-result: |
-      Открывается страница №3 
+      Символы автоматически удаляются при написании
     actual-result: |
-      Отстутствует функциональные кнопки навигации по списку товаров
-      
-test-cases:
-  - summary: |
-      Проверка неизменяемости формы "Категория"
-    status: fail
+      В поле "От" написано ";-+="
 
 bugreports:
   - summary: |
-       Список производителей меняется при перенаправлении на другую страницу списка товаров
+      В поле "До" можно ввести буквы русского алфавита
     environment: |
-      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      Google Chrome 111.0.5563.110 (Официальная сборка), (arm64)
       MacOS Ventura 13.0.1 
     steps-to-reproduce: |
-      1. Открыть главную страницу сайта со списком товаров
-      2. Нажать на кнопку "Следующая" в верхней части сайта
-      3. Проверить название производителей  в списке 
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/  
+      2. Ввести в поле "До" значение "абвг"
     expected-result: |
-      Варианты и названия производителей не должны измениться
+      Символы автоматически удаляются при написании
     actual-result: |
-      Названия производителей меняются в зависимости от товаров на КОНКРЕТНОЙ странице
-      
- test-cases:
-  - summary: |
-      Добавление заказа в список с заказами 
-    status: fail
+      В поле "До" написано "абвг"
 
 bugreports:
   - summary: |
-      Отсутствует форма для успешно сделанных ранее заказов
+      В поле "До" можно ввести буквы английского алфавита
+    environment: |
+      Google Chrome 111.0.5563.110 (Официальная сборка), (arm64)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/  
+      2. Ввести в поле "До" значение "zbh"
+    expected-result: |
+      Символы автоматически удаляются при написании
+    actual-result: |
+      В поле "До" написано "zbh"
+      
+bugreports:    
+  - summary: |
+      В поле "До" можно ввести спецсимволы
+    environment: |
+      Google Chrome 111.0.5563.110 (Официальная сборка), (arm64)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/  
+      2. Ввести в поле "До" значение ";-+="
+    expected-result: |
+      Символы автоматически удаляются при написании
+    actual-result: |
+      В поле "До" написано ";-+="
+
+bugreports:
+  - summary: |
+      В поле "От" можно ввести отрицательное число
+    environment: |
+      Google Chrome 111.0.5563.110 (Официальная сборка), (arm64)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/  
+      2. Ввести в поле "От" значение "-900"
+    expected-result: |
+      В поле нельзя ввести отрицательное число
+    actual-result: |
+      В поле "От" написано "-900"
+
+bugreports:
+  - summary: |
+      В поле "До" можно ввести отрицательное число
+    environment: |
+      Google Chrome 111.0.5563.110 (Официальная сборка), (arm64)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/ 
+      2. Ввести в поле "До" значение "-300"
+    expected-result: |
+      В поле нельзя ввести отрицательное число
+    actual-result: |
+      В поле "До" написано "-300"
+      
+bugreports:    
+  - summary: |
+      В поле "До" можно ввести число больше максимального значения
+    environment: |
+      Google Chrome 111.0.5563.110 (Официальная сборка), (arm64)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/  
+      2. Ввести в поле "До" значение "99999"
+    expected-result: |
+      На экране появляется надпись "Не более 11190"
+    actual-result: |
+      В поле "До" написано "99999"
+
+bugreports:
+  - summary: |
+      Отсутствует форма для оформленных  ранее заказов
     environment: |
       Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
       MacOS Ventura 13.0.1 
     steps-to-reproduce: |
-      1. Открыть главную страницу магазина со списком товаров  
-      2. Добавить в корзину любые два товара из списка товаров
-      3. Открыть вкладку "Корзина" в хэдере сайта
-      4. Нажать на кнопку "Оформить заказ"
-      5. Нажать на кнопку "Закрыть"
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/ 
+      2. Добавить в корзину любые два товара из списка 
+      3. Нажать "Корзина" 
+      4. Нажать "Оформить заказ"
+      5. Нажать "Закрыть"
     expected-result: |
       На экран выводится страница со списком оформленных заказов 
       На верхней строке списка располагается информация о последнем сделанном заказе
     actual-result: |
       На экране отсутствует страница со списком оформленных заказов
-    
-test-cases:
+      
+bugreports:  
   - summary: |
-      Удаления товаров из корзины после заказа
-    status: fail
-
-bugreports:
-  - summary: |
-      Товары из сделанного заказа не должны находиться в корзине для последующего заказа
+      Корзина не очищается после оформления заказа
     environment: |
       Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
       MacOS Ventura 13.0.1 
     steps-to-reproduce: |
-      1. Открыть главную страницу магазина со списком товаров
-      2. Добавить в корзину первые два товара из списка
-      3. Открыть вкладку "Корзина" в хэдере сайта
-      4. Нажать на кнопку "Оформить заказ"
-      5. Нажать на кнопку "Закрыть" 
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/ 
+      2. Добавить в корзину любые два товара из списка
+      3. Нажать "Корзина" 
+      4. Нажать "Оформить заказ"
+      5. Нажать "Закрыть"
     expected-result: |
       Корзина пуста
     actual-result: |
-      В корзине находятся уже оформленные в заказ товары 
-      
- test-cases:
-  - summary: |
-      Удаление товара из корзины
-    status: pass
-
-bugreports:[]
-
-test-cases:
-  - summary: |
-      Сайт должен иметь функиональность "Оплата заказа"
-    status: fail
+      В корзине находятся уже закаказанные товары 
 
 bugreports:
   - summary: |
-       Отсутствие формы для для оплаты банковской картой
+      Отсутствует возможность оплаты заказа банковской картой
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+    MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/ 
+      2. Добавить в корзину любые два товара из списка
+      3. Нажать "Корзина" 
+      4. Нажать "Оформить заказ"
+    expected-result: |
+      Происходит редирект на страницу оплаты
+    actual-result: |
+      Редирект на страницу оплаты не происходит
+
+bugreports:
+  - summary: |
+      Выбранное изображение в карточке товара не становится крупнее
     environment: |
       Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
       MacOS Ventura 13.0.1 
     steps-to-reproduce: |
-      1. Открыть главную страницу магазина https://hexlet-products-store.vercel.app/ 
-      2. Добавить в корзину первые два товара из списка
-      3. Открыть вкладку "Корзина" в хэдере сайта
-      4. Нажать на кнопку "Оформить заказ" 
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/products/1
+      2. Нажать на любое изображение товара под основным изображением
     expected-result: |
-      На экране появляется форма "Оплата" и позволяет оплатить заказ банковской картой 
+      Выбранное изображение перемещается на поле "главного" изображения
     actual-result: |
-      Отсутствие формы для для оплаты банковской картой
-      
-  test-cases:
-  - summary: |
-      Оплата платежными системами VISA, Mastercard, МИР
-    status: fail
+      Изображение не меняет свое положение и не становится крупнее
 
 bugreports:
   - summary: |
-       Пользователь не имеет возможности оплатить заказ картами платежных систем VISA, Mastercard, МИР
+      Различие внешнего вида кнопок "Add to cart" / "В корзину"
     environment: |
       Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
       MacOS Ventura 13.0.1 
     steps-to-reproduce: |
-      1. Открыть главную страницу магазина https://hexlet-products-store.vercel.app/ 
-      2. Добавить в корзину первые два товара из списка
-      3. Открыть вкладку "Корзина" в хэдере сайта
-      4. Нажать на кнопку "Оформить заказ" 
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Нажать "Next"
+      3. Нажать "Next"
+      4. Проскроллить вниз
     expected-result: |
-      На экран выводится отдельная форма оплаты с вариантами платежных систем VISA, Mastercard, МИР
+      Все кнопки одного размера 
     actual-result: |
-      Отсутствие формы для для оплаты банковской картой
-      Отсутствие возможных вариантов оплаты банковской картой
+      Кнопки разного размера
       
-test-cases:
+bugreports:  
   - summary: |
-      Корректность вывода на экран изображения в карточке товара
-    status: pass
-    
-bugreports:[]
+      Смещение за поля цены товары и кнопки "В корзину"
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт  https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Нажать "Language"
+      3. Нажать "Russian"
+      4. Нажать "Следующая"
+      5. Нажать "Следующая"
+      6. Прокрутить страницу вниз 
+    expected-result: |
+      Цены и кнопка "В Корзину" располагаются в строго в рамках полей карточки товара
+    actual-result: |
+      Цены и кнопка "В Корзину" смещаются вниз за поля карточки товара 
+ 
+bugreports:
+  - summary: |
+      Отсутствие информации о количестве товара в карточке товара
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/products/1
+    expected-result: |
+      В карточке товара написано, что означает число рядом с кнопкой "Add to cart"
+    actual-result: |
+      В карточке товара нет доступной информации о количестве товара при заказе ИЛИ
+      Интуитивно не понятно, что означает число рядом с кнопкой "В корзину" / "Add to cart" (screen14)
+
+bugreports:
+  - summary: |
+      Отсутствует выравнивание в форме "Заказ успешно оформлен"
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/ 
+      2. Добавить 3 любых товара из списка в корзину
+      3. Нажать "Cart" 
+      4. Нажать  "Chekout"
+    expected-result: |
+      Колонка "Колличество товаров" выровнена по вертикали
+    actual-result: |
+      Колонка "Колличество товаров" не выровнена по вертикали (screen13)
+      
+bugreports:  
+  - summary: |
+      Не работает кнопка "х" в форме "Заказ успешно оформлен"
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/products/1 
+      2. Нажать "Add to cart" 
+      3. Нажать "Cart" 
+      4. Нажать "Chekout"
+      5. Нажать  "х" вверху формы 
+    expected-result: |
+      Форма "Заказ успешно оформлен" закрывается 
+    actual-result: |
+      Кнопка не работает
+
+bugreports:
+  - summary: |
+      Грамматическая ошибка
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/products/1 
+      2. Нажать "Add to cart"
+      3. Нажать "Cart"
+      4. Нажать "Chekout" 
+    expected-result: |
+      В появившемся окне  сверху выведен текст "Заказ успешно оформлен"
+    actual-result: |
+      В появившемся окне  сверху выведен текст "Заказ успешно формлен" 
+
+bugreports:
+  - summary: |
+      Валюта не конвертируется при смене языка
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Нажать "Language"
+      3. Нажать "Russian"
+    expected-result: |
+      Цены в карточке товаров поменялись на рубли
+    actual-result: |
+      Цены в карточке товара остались  в долларах
+ 
+bugreports:
+  - summary: |
+      Изображение  Samsung Universe 9 не соответствует действительности
+    environment: |
+      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+      MacOS Ventura 13.0.1 
+    steps-to-reproduce: |
+      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/products/3
+    expected-result: |
+      На изображении находится смартфон Samsung Universe 9
+    actual-result: |  
+      На изображении другой смартфон
+      
+      
+      
+      
+      
+      
+      
