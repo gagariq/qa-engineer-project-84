@@ -449,3 +449,15 @@
     Цены в карточке товаров поменялись на рубли
   actual-result: |
     Цены в карточке товра остались  в долларах
+    
+- summary: |
+    Изображение  Samsung Universe 9 не соответствует действительности
+  environment: |
+    Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+    MacOS Ventura 13.0.1 
+  steps-to-reproduce: |
+    1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/products/3
+  expected-result: |
+    На изображении находится смартфон Samsung Universe 9
+  actual-result: |  
+    На изображении другой смартфон
