@@ -9,62 +9,62 @@ test-cases:
       Успешный поиск товара на всех страницах по ключевому слову  
     status: fail
     
-test-cases:    
+test-cases:  
   - summary: |
       Проверка фильтрации на странице по категории "smartphones" 
     status: pass
 
-test-cases: 
+test-cases:
   - summary: |
       Проверка фильтрации  по категории "Skincare"
     status: pass  
  
-test-cases: 
+test-cases:
   - summary: |
       Проверка фильтрации  товаров по категории "tops"
     status: pass
 
-test-cases: 
+test-cases:
   - summary: |
       Проверка фильтрации товаров по цене "От - До" с целыми числами
     status: pass
 
-test-cases: 
+test-cases:
   - summary: |
       Проверка фильтрации  товаров по цене "От" с целым числом
     status: pass
 
-test-cases: 
+test-cases:
   - summary: |
       Проверка фильтрации товаров по цене "От" с дробным числом
     status: pass
 
-test-cases: 
+test-cases:
   - summary: |
       Проверка фльтрации товаров по цене "До" с целым числом
     status: pass
     
-test-cases:   
+test-cases: 
   - summary: |
       Проверка фльтрации товаров по цене "До" с дробным числом
     status: pass
 
-test-cases: 
+test-cases:
   - summary: |
       Проверка добавления товара в корзину
     status: pass
     
-test-cases:   
+test-cases:  
   - summary: |
       Проверка просмотра содержимого корзины
     status: pass
     
-test-cases:   
+test-cases:  
   - summary: |
       Проверка детализации информации о товаре
     status: pass
 
-test-cases: 
+test-cases:
   - summary: |
       Проверка адаптивности на Iphone 12 Pro
     status: fail
@@ -74,7 +74,7 @@ test-cases:
       Проверка адаптивности на Ipad Pro
     status: pass
 
-test-cases: 
+test-cases:
   - summary: |
       Проверка адаптивности на Galaxy Note 3
     status: fail
@@ -84,7 +84,7 @@ test-cases:
       Проверка адаптивности на Galaxy S9+
     status: fail
   
-test-cases: 
+test-cases:
   - summary: |
       Провекрка на наличие мобильной версии
     status: pass
@@ -94,12 +94,12 @@ test-cases:
       Проверка сайта на использование протокола HTTPS
     status: pass
   
-test-cases: 
+test-cases:
   - summary: |
       Проверка сайта на уязвимость XSS-атак
     status: pass
   
-test-cases: 
+test-cases:
   - summary: |
       Проверка работы сайта под нагрузкой 
     status: pass
@@ -109,17 +109,17 @@ test-cases:
       Проверка работы сайта в браузере "Firefox" 
     status: pass
   
-test-cases: 
+test-cases:
   - summary: |
       Проверка работы сайта в браузере "Safari"
     status: pass
 
-test-cases: 
+test-cases:
   - summary: |
       Проверка работы сайта в браузере "Chrome"
     status: pass
   
-test-cases: 
+test-cases:
   - summary: |
       Проверка работы сайта в браузере "Yandex"
     status: pass
@@ -129,7 +129,7 @@ test-cases:
       Проверка работы сайта в браузере "Opera"
     status: pass
   
-test-cases: 
+test-cases:
   - summary: |
       Проверка работы сайта в браузере "Edge"
     status: pass
