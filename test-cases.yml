@@ -191,7 +191,7 @@
       В корзину добавлен товар "Iphone X"
     test-data: |
       "Сart" = корзина
-    steps: |
+    steps: 
       - Нажать "Cart"
     expected-result: |
       В корзине находится товар "IPhone X"
@@ -204,7 +204,7 @@
       Открыт сайт https://hexlet-products-store.vercel.app/
     test-data: |
       Товар = "Iphone X"
-    steps: |
+    steps: 
       - Нажать на изображение товара
     expected-result: |
       На экране выводится карточка товара с изображениями товара и описанием в заголовке "Description"
@@ -277,6 +277,7 @@
       Открыт сайт Browser Stack https://live.browserstack.com/
       Пользователь авторизован на сайте Browser Stack
     test-data: |
+      Девайс "Iphone 12"
     steps:
       - Выбрать категории "iOS => iPhone => iPhone 12 => Нажать Safari"
       - Ввести https://hexlet-products-store.vercel.app/ в адресную строку Browser Stack
@@ -319,8 +320,8 @@
     prerequisites: |
       Использование программы Apache Jmeter
     test-data: 
-      - Количество уникальных пользователей для нагрузки = 3000
-      - Ramp-up = 10
+      Количество уникальных пользователей для нагрузки = 3000
+      Ramp-up = 10
     steps:
       - Открыть программу Jmeter
       - Добавить к вкладке "Test Plan" категорию "Thread Group"
@@ -483,8 +484,8 @@
       Язык - русский
     test-data: |
       Кнопка "Следующий"
-    steps: |
-      Нажать "Следующий"
+    steps: 
+      - Нажать "Следующий"
     expected-result: |
       Открыта вторая страница с товарами  
       
@@ -574,8 +575,8 @@
     test-data: 
       Товар №1 = "iPhone 9" 
       Товар №2 = "iPhone X"
-    steps: |
-      Нажать "Удалить" для товара №1
+    steps: 
+      - Нажать "Удалить" для товара №1
     expected-result: |
       В корзине остался только Товар №2    
  
