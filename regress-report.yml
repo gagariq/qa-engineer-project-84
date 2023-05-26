@@ -4,192 +4,154 @@ test-cases:
       Успешный поиск товара на открытой странице по ключевому слову 
     status: fail
     
-test-cases:
   - summary: |
       Успешный поиск товара на всех страницах по ключевому слову  
     status: fail
     
-test-cases:  
   - summary: |
       Проверка фильтрации на странице по категории "smartphones" 
     status: pass
 
-test-cases:
   - summary: |
       Проверка фильтрации  по категории "Skincare"
     status: pass  
- 
-test-cases:
+
   - summary: |
       Проверка фильтрации  товаров по категории "tops"
     status: pass
 
-test-cases:
   - summary: |
       Проверка фильтрации товаров по цене "От - До" с целыми числами
     status: pass
 
-test-cases:
   - summary: |
       Проверка фильтрации  товаров по цене "От" с целым числом
     status: pass
 
-test-cases:
   - summary: |
       Проверка фильтрации товаров по цене "От" с дробным числом
     status: pass
 
-test-cases:
   - summary: |
       Проверка фльтрации товаров по цене "До" с целым числом
     status: pass
     
-test-cases: 
   - summary: |
       Проверка фльтрации товаров по цене "До" с дробным числом
     status: pass
 
-test-cases:
   - summary: |
       Проверка добавления товара в корзину
     status: pass
     
-test-cases:  
   - summary: |
       Проверка просмотра содержимого корзины
     status: pass
     
-test-cases:  
   - summary: |
       Проверка детализации информации о товаре
     status: pass
 
-test-cases:
   - summary: |
       Проверка адаптивности на Iphone 12 Pro
     status: fail
  
-test-cases: 
   - summary: |
       Проверка адаптивности на Ipad Pro
     status: pass
 
-test-cases:
   - summary: |
       Проверка адаптивности на Galaxy Note 3
     status: fail
 
-test-cases: 
   - summary: |
       Проверка адаптивности на Galaxy S9+
     status: fail
   
-test-cases:
   - summary: |
-      Провекрка на наличие мобильной версии
+      Проверка на наличие мобильной версии
     status: pass
   
-test-cases: 
   - summary: |
       Проверка сайта на использование протокола HTTPS
     status: pass
   
-test-cases:
   - summary: |
       Проверка сайта на уязвимость XSS-атак
     status: pass
   
-test-cases:
   - summary: |
       Проверка работы сайта под нагрузкой 
     status: pass
   
-test-cases: 
   - summary: |
       Проверка работы сайта в браузере "Firefox" 
     status: pass
   
-test-cases:
   - summary: |
       Проверка работы сайта в браузере "Safari"
     status: pass
 
-test-cases:
   - summary: |
       Проверка работы сайта в браузере "Chrome"
     status: pass
   
-test-cases:
   - summary: |
       Проверка работы сайта в браузере "Yandex"
     status: pass
-  
-test-cases: 
+   
   - summary: |
       Проверка работы сайта в браузере "Opera"
     status: pass
   
-test-cases:
   - summary: |
       Проверка работы сайта в браузере "Edge"
     status: pass
   
-test-cases: 
   - summary: |
       Проверка работы сайта в браузере "Internet Explorer"
     status: pass
-  
-test-cases: 
+   
   - summary: |
       Проверка кнопки навигации "Следующий" 
     status: pass
-  
-test-cases: 
+   
   - summary: |
       Проверка кнопки навигации "Предыдущий" 
     status: pass
   
-test-cases: 
   - summary: |
       Проверка фильтрации товара по производителю Apple
     status: pass
-  
-test-cases: 
+   
   - summary: |
       Проверка фильтрации товара по производителю Rubber
     status: pass
   
-test-cases: 
   - summary: |
       Проверка фильтрации товара по производителю Dadawu
     status: pass
   
-test-cases: 
   - summary: |
       Проверка очистки корзины после заказа
     status: fail
   
-test-cases: 
   - summary: |
       Проверка удаления товара из корзины
     status: pass
   
-test-cases: 
   - summary: |
       Проверка изображений в карточке товара
     status: pass
-  
-test-cases: 
+   
   - summary: |
       Проверка переключения языка на русский
     status: pass 
-  
-test-cases: 
+   
   - summary: |
       Проверка переключения языка на английский
     status: pass 
   
-test-cases: 
   - summary: |
       Проверка конвертации "доллар" в "рубль" при изменении языка
     status: fail
@@ -208,7 +170,6 @@ bugreports:
     actual-result: |
       На экран выводится только один товар
       
-bugreports: 
   - summary: |
       Пустая строка в "Category"
     environment: |
@@ -222,7 +183,6 @@ bugreports:
     actual-result: |
       Верхняя строка пустая
       
-bugreports: 
   - summary: |
       При выборе категории пропадают кнопки навигации
     environment: |
@@ -237,7 +197,6 @@ bugreports:
     actual-result: |
       Кнопки навигации по страницам  исчезают
       
-bugreports: 
   - summary: |
       Лишние символы в колонке "Количество" в корзине пользователя
     environment: |
@@ -252,7 +211,6 @@ bugreports:
     actual-result: |  
       Рядом с колличеством товара в заказе стоят символы "qty" (screen10)
       
-bugreports: 
   - summary: |
       Товар не удаляется из корзины при нажатии кнопки "Clear cart"
     environment: |
@@ -270,7 +228,6 @@ bugreports:
     actual-result: |  
       В корзине находится удаленный товар  
       
-bugreports: 
   - summary: |
       Значения списка "Категория" не переводится на русский язык
     environment: |
@@ -286,7 +243,6 @@ bugreports:
     actual-result: |  
       Список категорий остался на английском языке (screen11)
       
-bugreports: 
   - summary: |
       Изображение  Samsung Universe 9 не соответствует действительности
     environment: |
@@ -298,8 +254,7 @@ bugreports:
       На изображении - смартфон Samsung Universe 9
     actual-result: |  
       На изображении другой смартфон
-      
-bugreports: 
+       
   - summary: |
       Кнопка "Previous" смещается вверх при поиске товара
     environment: |
@@ -313,8 +268,7 @@ bugreports:
       Кнопка "Previous" внизу сайта остается на месте 
     actual-result: |
       Кнопка "Previous" смещается наверх (screen12)
-      
-bugreports: 
+       
   - summary: |
       Поле "Search" изменяется при вводе текста
     environment: |
@@ -329,7 +283,6 @@ bugreports:
     actual-result: |
       Поле "Search" изменяет размер (screen12)   
       
-bugreports:
   - summary: |
       Нет функции "Сортировать по цвету"
     environment: |
@@ -342,8 +295,7 @@ bugreports:
       На сайте есть форма для фильтрации товара по цвету
     actual-result: |
       На сайте отсутствует форма для фильтрации товара по цвету
-      
-bugreports:  
+        
   - summary: |
       Нет функции "Сортирвать по размеру"
     environment: |
@@ -357,7 +309,6 @@ bugreports:
     actual-result: |
       На сайте отсутствует форма для фильтрации товара по размеру
       
-bugreports: 
   - summary: |
       Отсутствует регистрация в приложении
     environment: |
@@ -375,7 +326,6 @@ bugreports:
       В хэдере сайта отсутствет кнопка "Регистрация" И
       При оформлении заказа приложение не запрашивает регистрацию  
     
-bugreports:
   - summary: |
       Отсутствует авторизация в приложении
     environment: |
@@ -387,8 +337,7 @@ bugreports:
       На  есть кнопка "Войти" с формой для авторизации пользователя
     actual-result: |
       На сайте нет кнопки "Войти" с формой для авторизации пользователя
-     
-bugreports:  
+      
   - summary: |
       Отсутствие постраничной навигации по списку 
     environment: |
@@ -401,7 +350,6 @@ bugreports:
     actual-result: |
       На сайте отсутствует постраничная навигация по списку товаров
     
-bugreports:
   - summary: |
       Приложение не адаптивно для IPhone 12 Pro
     environment: |
@@ -418,7 +366,6 @@ bugreports:
       Внешний вид приложения заметно меняется, становится сложно читаемым; 
       Элементы страницы располагаются некорректно 
 
-bugreports:
   - summary: |
       Приложение не адаптивно для Galaxy Note 3
     environment: |
@@ -435,7 +382,6 @@ bugreports:
       Внешний вид приложения заметно меняется, становится сложно читаемым; 
       Элементы страницы располагаются некорректно
  
-bugreports:
   - summary: |
       Приложение не адаптивно для Galaxy S9+
     environment: |
@@ -451,7 +397,6 @@ bugreports:
     actual-result: |
       Внешний вид приложения заметно меняется, становится сложно читаемым; элементы страницы располагаются некорректно
    
-bugreports:
   - summary: |
       В поле "От" можно ввести буквы русского алфавита
     environment: |
@@ -464,8 +409,7 @@ bugreports:
       Символы автоматически удаляются при написании
     actual-result: |
       В поле "От" написано "абвг"
-      
-bugreports:   
+         
   - summary: |
       В поле "От" можно ввести буквы английского алфавита
     environment: |
@@ -478,8 +422,7 @@ bugreports:
       Символы автоматически удаляются при написании
     actual-result: |
       В поле "От" написано "zbh"
-      
-bugreports:    
+          
   - summary: |
       В поле "От" можно ввести спецсимволы
     environment: |
@@ -493,7 +436,6 @@ bugreports:
     actual-result: |
       В поле "От" написано ";-+="
 
-bugreports:
   - summary: |
       В поле "До" можно ввести буквы русского алфавита
     environment: |
@@ -507,7 +449,6 @@ bugreports:
     actual-result: |
       В поле "До" написано "абвг"
 
-bugreports:
   - summary: |
       В поле "До" можно ввести буквы английского алфавита
     environment: |
@@ -520,8 +461,7 @@ bugreports:
       Символы автоматически удаляются при написании
     actual-result: |
       В поле "До" написано "zbh"
-      
-bugreports:    
+         
   - summary: |
       В поле "До" можно ввести спецсимволы
     environment: |
@@ -535,7 +475,6 @@ bugreports:
     actual-result: |
       В поле "До" написано ";-+="
 
-bugreports:
   - summary: |
       В поле "От" можно ввести отрицательное число
     environment: |
@@ -549,7 +488,6 @@ bugreports:
     actual-result: |
       В поле "От" написано "-900"
 
-bugreports:
   - summary: |
       В поле "До" можно ввести отрицательное число
     environment: |
@@ -562,8 +500,7 @@ bugreports:
       В поле нельзя ввести отрицательное число
     actual-result: |
       В поле "До" написано "-300"
-      
-bugreports:    
+          
   - summary: |
       В поле "До" можно ввести число больше максимального значения
     environment: |
@@ -577,7 +514,6 @@ bugreports:
     actual-result: |
       В поле "До" написано "99999"
 
-bugreports:
   - summary: |
       Отсутствует форма для оформленных  ранее заказов
     environment: |
@@ -594,8 +530,7 @@ bugreports:
       На верхней строке списка располагается информация о последнем сделанном заказе
     actual-result: |
       На экране отсутствует страница со списком оформленных заказов
-      
-bugreports:  
+        
   - summary: |
       Корзина не очищается после оформления заказа
     environment: |
@@ -612,12 +547,11 @@ bugreports:
     actual-result: |
       В корзине находятся уже закаказанные товары 
 
-bugreports:
   - summary: |
       Отсутствует возможность оплаты заказа банковской картой
     environment: |
       Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
-    MacOS Ventura 13.0.1 
+      MacOS Ventura 13.0.1 
     steps-to-reproduce: |
       1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/ 
       2. Добавить в корзину любые два товара из списка
@@ -628,7 +562,6 @@ bugreports:
     actual-result: |
       Редирект на страницу оплаты не происходит
 
-bugreports:
   - summary: |
       Выбранное изображение в карточке товара не становится крупнее
     environment: |
@@ -642,7 +575,6 @@ bugreports:
     actual-result: |
       Изображение не меняет свое положение и не становится крупнее
 
-bugreports:
   - summary: |
       Различие внешнего вида кнопок "Add to cart" / "В корзину"
     environment: |
@@ -657,8 +589,7 @@ bugreports:
       Все кнопки одного размера 
     actual-result: |
       Кнопки разного размера
-      
-bugreports:  
+        
   - summary: |
       Смещение за поля цены товары и кнопки "В корзину"
     environment: |
@@ -676,7 +607,6 @@ bugreports:
     actual-result: |
       Цены и кнопка "В Корзину" смещаются вниз за поля карточки товара 
  
-bugreports:
   - summary: |
       Отсутствие информации о количестве товара в карточке товара
     environment: |
@@ -690,7 +620,6 @@ bugreports:
       В карточке товара нет доступной информации о количестве товара при заказе ИЛИ
       Интуитивно не понятно, что означает число рядом с кнопкой "В корзину" / "Add to cart" (screen14)
 
-bugreports:
   - summary: |
       Отсутствует выравнивание в форме "Заказ успешно оформлен"
     environment: |
@@ -705,8 +634,7 @@ bugreports:
       Колонка "Колличество товаров" выровнена по вертикали
     actual-result: |
       Колонка "Колличество товаров" не выровнена по вертикали (screen13)
-      
-bugreports:  
+        
   - summary: |
       Не работает кнопка "х" в форме "Заказ успешно оформлен"
     environment: |
@@ -723,7 +651,6 @@ bugreports:
     actual-result: |
       Кнопка не работает
 
-bugreports:
   - summary: |
       Грамматическая ошибка
     environment: |
@@ -739,7 +666,6 @@ bugreports:
     actual-result: |
       В появившемся окне  сверху выведен текст "Заказ успешно формлен" 
 
-bugreports:
   - summary: |
       Валюта не конвертируется при смене языка
     environment: |
@@ -754,7 +680,6 @@ bugreports:
     actual-result: |
       Цены в карточке товара остались  в долларах
  
-bugreports:
   - summary: |
       Изображение  Samsung Universe 9 не соответствует действительности
     environment: |
