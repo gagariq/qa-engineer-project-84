@@ -692,6 +692,19 @@ bugreports:
     actual-result: |  
       На изображении другой смартфон
       
+  - summary: |
+    Приложение не защищено от XSS-атак
+  environment: |
+    Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
+    MacOS Ventura 13.0.1 
+  steps-to-reproduce: |
+    1. Открыть сайт //products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Ввести скрипт <script>alert(123)</script> в поле "Search"
+  expected-result: |
+    Скрипт автоматически удаляется из поля 
+  actual-result: |  
+    В поле "Search" отображается скрипт
+      
       
       
       
