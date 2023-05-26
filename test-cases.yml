@@ -39,8 +39,8 @@
     test-data: |
       Категория = "smartphones"
     steps:
-      Нажать "Category"
-      Нажать "Smartphones"
+      - Нажать "Category"
+      - Нажать "Smartphones"
     expected-result: |
       На экран выводится список смартфонов со страницы
       
@@ -163,7 +163,7 @@
       - Нажать "Следующая"
       - Нажать "Следующая"
     expected-result: |
-        На экран выводятся товары, цена которых составляет менее $100
+       На экран выводятся товары, цена которых составляет менее $100
        
   - summary: |
       Успешное добавление товара в корзину
@@ -175,7 +175,7 @@
       Каждый товар имеет кнопку "Add to cart"
     test-data: |
       Товар для добавления = iPhone X
-    steps: |
+    steps: 
       - Нажать "Add to cart" в карточке товара
       - Нажать "Cart"
     expected-result: |
@@ -190,8 +190,9 @@
       Язык интерфейса - английский 
       В корзину добавлен товар "Iphone X"
     test-data: |
+      "Сart" = корзина
     steps: |
-      Нажать "Cart"
+      - Нажать "Cart"
     expected-result: |
       В корзине находится товар "IPhone X"
       
@@ -204,7 +205,7 @@
     test-data: |
       Товар = "Iphone X"
     steps: |
-      Нажать на изображение товара
+      - Нажать на изображение товара
     expected-result: |
       На экране выводится карточка товара с изображениями товара и описанием в заголовке "Description"
       
@@ -290,6 +291,7 @@
     prerequisites: 
       Открыт сайт https://hexlet-products-store.vercel.app/  в Mozilla Firefox
     test-data: |
+      HTTPS
     steps:
       - Нажать "ЗамОк" рядом с адресной строкой
       - Нажать "Защищенное соединение"
@@ -303,12 +305,12 @@
     prerequisites: 
       Открыт сайт https://hexlet-products-store.vercel.app/  
     test-data: |
-      Скрипт = <script>alert(123)</script>
+      Скрипт = "<script>alert(123)</script>"
     steps:
-      - Ввести скрипт в конце адресной строки
+      - Ввести скрипт в поле "Search"
       - Нажать "Enter"
     expected-result: |
-      На сайте не появляется уведомление об ошибке
+      Скрипт автоматически удаляется из поля "Search"
 
   - summary: |
       Проверка работы сайта под нагрузкой 
@@ -341,6 +343,7 @@
       Авторизация в Browser Stack выполнена
       Выбрано окружение - Mac (OS Ventura)
     test-data: |
+      Firefox
     steps:
       - Нажать на последнюю версию браузера "Firefox"
       - Ввести URL приложения
@@ -360,6 +363,7 @@
       Авторизация в Browser Stack выполнена
       Выбрано окружение - Mac (OS Ventura)
     test-data: |
+      Safari
     steps:
       - Нажать на последнюю версию браузера "Safari"
       - Ввести URL приложения
@@ -379,6 +383,7 @@
       Авторизация в Browser Stack выполнена
       Выбрано окружение - Mac (Monterey)
     test-data: |
+      Chrome
     steps:
       - Нажать на последнюю версию браузера "Chrome"
       - Ввести URL приложения
@@ -398,6 +403,7 @@
       Авторизация в Browser Stack выполнена
       Выбрано окружение - Windows 10
     test-data: |
+      Yandex
     steps:
       - Нажать на последнюю версию браузера "Yandex"
       - Ввести URL приложения
@@ -417,6 +423,7 @@
       Авторизация в Browser Stack выполнена
       Выбрано окружение - Windows 10
     test-data: |
+      Opera
     steps:
       - Нажать на последнюю версию браузера "Opera"
       - Ввести URL приложения
@@ -436,6 +443,7 @@
       Авторизация в Browser Stack выполнена
       Выбрано окружение - Windows 11
     test-data: |
+      Edge
     steps:
       - Нажать на последнюю версию браузера "Edge"
       - Ввести URL приложения
@@ -455,6 +463,7 @@
       Авторизация на сайте Browser Stack выполнена
       Выбрано окружение - Win 7
     test-data: |
+      IE
     steps:
       - Нажать на последнюю версию браузера "IE"
       - Ввести URL приложения
@@ -473,6 +482,7 @@
       Открыт сайт https://hexlet-products-store.vercel.app/ 
       Язык - русский
     test-data: |
+      Кнопка "Следующий"
     steps: |
       Нажать "Следующий"
     expected-result: |
@@ -486,8 +496,9 @@
       Открыт сайт https://hexlet-products-store.vercel.app/  на четвертой странице списка с товарами
       Язык - русский
     test-data: |
-    steps: |
-      Нажать "Предыдущая"
+      Кнопка "Предыдущая"
+    steps: 
+      - Нажать "Предыдущая"
     expected-result: |
       Открыта третья страница с товарами 
       
@@ -499,8 +510,9 @@
       Открыт сайт https://hexlet-products-store.vercel.app/ 
       Язык - английский
     test-data: |
-    steps: |
-      Нажать чекбокс "Apple"
+      Чекбокс "Apple"
+    steps: 
+      - Нажать чекбокс "Apple"
     expected-result: |
       На страницу выведены все товары производителя "Apple" 
       
@@ -512,7 +524,8 @@
       Открыт сайт https://hexlet-products-store.vercel.app/ 
       Язык - английский
     test-data: |
-    steps: |
+      Чекбокс "Rubber"
+    steps: 
       - Нажать "Следующий"
       - Нажать чекбокс "Rubber"
     expected-result: |
@@ -526,7 +539,8 @@
       Открыт сайт https://hexlet-products-store.vercel.app/ 
       Язык - английский
     test-data: |
-    steps: |
+      Чекбокс "Dadawu"
+    steps: 
       - Нажать "Следующий"
       - Нажать "Следующий"
       - Нажать "Следующий"
@@ -542,8 +556,8 @@
       В корзину добавлены два товара
       Открыт сайт https://hexlet-products-store.vercel.app/cart
     test-data: 
-      - Товар №1 = "iPhone 9"
-      - Товар №2 = "iPhone X"
+      Товар №1 = "iPhone 9"
+      Товар №2 = "iPhone X"
     steps:
       - Нажать "Оформить заказ"
       - Нажать "Закрыть"
@@ -558,8 +572,8 @@
       Открыт сайт https://hexlet-products-store.vercel.app/cart
       В корзину добавлены два товара
     test-data: 
-      - Товар №1 = "iPhone 9" 
-      - Товар №2 = "iPhone X"
+      Товар №1 = "iPhone 9" 
+      Товар №2 = "iPhone X"
     steps: |
       Нажать "Удалить" для товара №1
     expected-result: |
@@ -572,8 +586,9 @@
     prerequisites: |
       Открыт сайт  https://hexlet-products-store.vercel.app/products/1
     test-data: |
+      Изображение смартфона
     steps:
-      Нажать на первое изображение товара под основным
+      - Нажать на первое изображение товара под основным
     expected-result: |
       Изображение становится основным в карточке товара
       
@@ -584,6 +599,7 @@
     prerequisites: |
       Открыт сайт  https://hexlet-products-store.vercel.app/
     test-data: |
+      Русский язык
     steps:
       - Нажать "Languge"
       - Нажать "Rusiian"
@@ -598,6 +614,7 @@
       Открыт сайт  https://hexlet-products-store.vercel.app/
       Интерфейс языка - русский
     test-data: |
+      Английский язык
     steps:
       - Нажать "Язык"
       - Нажать "English"
@@ -611,6 +628,7 @@
     prerequisites: |
       Открыт сайт  https://hexlet-products-store.vercel.app/
     test-data: |
+      Валюта
     steps:
       - Нажать "Language"
       - Нажать "Russian"
