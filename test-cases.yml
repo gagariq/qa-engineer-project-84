@@ -4,9 +4,9 @@
     requirement: |
       Поиск осуществляется по списку товаров на развернутой странице
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/
-      - Язык интерфейса - английский
-      - В списке товаров магазина есть товар с названием "laptop"
+      Открыт сайт https://hexlet-products-store.vercel.app/
+      Язык интерфейса - английский
+      В списке товаров магазина есть товар с названием "laptop"
     test-data: |
        Ключевое слово = "laptop"
     steps:
@@ -19,9 +19,9 @@
     requirement: |
       Поиск осуществляется по списку товаров со всех страниц
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/
-      - Язык интерфейса - английский
-      - В списке товаров магазина  есть товар с названием "bed"
+      Открыт сайт https://hexlet-products-store.vercel.app/
+      Язык интерфейса - английский
+      В списке товаров магазина  есть товар с названием "bed"
     test-data: |
        Ключевое слово = "Bed"
     steps:
@@ -34,13 +34,13 @@
     requirement: |
       Фильтрация затрагивает товары только на открытой странице 
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/
-      - Язык интерфейса - анлглийский
+      Открыт сайт https://hexlet-products-store.vercel.app/
+      Язык интерфейса - анлглийский
     test-data: |
       Категория = "smartphones"
     steps:
-      - Нажать "Category"
-      - Нажать "Smartphones"
+      Нажать "Category"
+      Нажать "Smartphones"
     expected-result: |
       На экран выводится список смартфонов со страницы
       
@@ -49,10 +49,10 @@
     requirement: |
       Фильтрация затрагивает товары только на открытой странице 
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/
-      - Язык интерфейса - анлглийский
+      Открыт сайт https://hexlet-products-store.vercel.app/
+      Язык интерфейса - анлглийский
     test-data: |
-      Категория = "Skinscare"
+      Категория = "Skinсare"
     steps:
       - Нажать "Category"
       - Нажать "Skinscare"
@@ -64,8 +64,8 @@
     requirement: |
       Фильтрация затрагивает товары только на открытой странице  
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/
-      - Язык интерфейса - анлглийский
+      Открыт сайт https://hexlet-products-store.vercel.app/
+      Язык интерфейса - анлглийский
     test-data: |
       Категория = "tops"
     steps:
@@ -80,8 +80,8 @@
     requirement: |
        Пользователь может отфильтровать товары при вводе в два поля целых положительных чисел
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/
-      - Язык интерфейса - русский
+      Открыт сайт https://hexlet-products-store.vercel.app/
+      Язык интерфейса - русский
     test-data: 
         Минимальное значение "От" = 0
         Максимальное значение "До" = 11190
@@ -99,8 +99,8 @@
     requirement: |
        Пользователь может отфильтровать товары при вводе в поле "От" целого положительного числа
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/
-      - Язык интерфейса - русский
+      Открыт сайт https://hexlet-products-store.vercel.app/
+      Язык интерфейса - русский
     test-data: 
       Минимальное значение "От" = 0
       Максимальное значение "До" = 11190
@@ -117,8 +117,8 @@
     requirement: |
        Пользователь может отфильтровать товары при вводе в поле "От" дробного положительного числа
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/
-      - Язык интерфейса - русский
+      Открыт сайт https://hexlet-products-store.vercel.app/
+      Язык интерфейса - русский
     test-data: 
       Минимальное значение "От" = 0
       Максимальное значение "До" = 11190
@@ -135,8 +135,8 @@
     requirement: |
        Пользователь может отфильтровать товары при вводе в поле "До" дробного положительного числа
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/
-      - Язык интерфейса - русский
+      Открыт сайт https://hexlet-products-store.vercel.app/
+      Язык интерфейса - русский
     test-data: 
       Минимальное значение "От" = 0
       Максимальное значение "До" = 11190
@@ -153,8 +153,8 @@
     requirement: |
        Пользователь может отфильтровать товары при вводе в поле "От" целого положительного числа
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/
-      - Язык интерфейса - русский
+      Открыт сайт https://hexlet-products-store.vercel.app/
+      Язык интерфейса - русский
     test-data: 
       Минимальное значение "От" = 0
       Максимальное значение "До" = 11190
@@ -170,9 +170,9 @@
     requirement: |
       Пользователь может добавить товар в корзину 
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/
-      - Язык интерфейса - английский
-      - Каждый товар имеет кнопку "Add to cart"
+      Открыт сайт https://hexlet-products-store.vercel.app/
+      Язык интерфейса - английский
+      Каждый товар имеет кнопку "Add to cart"
     test-data: |
       Товар для добавления = iPhone X
     steps: |
@@ -186,9 +186,9 @@
     requirement: |
       Пользователь может посмотреть список товаров в своей корзине 
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/
-      - Язык интерфейса - английский 
-      - В корзину добавлен товар "Iphone X"
+      Открыт сайт https://hexlet-products-store.vercel.app/
+      Язык интерфейса - английский 
+      В корзину добавлен товар "Iphone X"
     test-data: |
     steps: |
       Нажать "Cart"
@@ -213,8 +213,8 @@
     requirement: |
       Сайт не должен критично отличаться от веб-версии 
     prerequisites: |
-      - Открыт сайт https://hexlet-products-store.vercel.app/ в Google Chrome
-      - Открыт DevTools
+      Открыт сайт https://hexlet-products-store.vercel.app/ в Google Chrome
+      Открыт DevTools
     test-data: |
       Девайс = Iphone 12 Pro
     steps:
@@ -228,8 +228,8 @@
     requirement: |
       Сайт не должен критично отличаться от веб-версии 
     prerequisites: |
-      - Открыт сайт https://hexlet-products-store.vercel.app/ в Google Chrome
-      - Открыт DevTools
+      Открыт сайт https://hexlet-products-store.vercel.app/ в Google Chrome
+      Открыт DevTools
     test-data: |
       Девайс = Ipad Pro
     steps:
@@ -243,8 +243,8 @@
     requirement: |
       Сайт не должен критично отличаться от веб-версии 
     prerequisites: |
-      - Открыт сайт https://hexlet-products-store.vercel.app/ в Google Chrome
-      - Открыт DevTools
+      Открыт сайт https://hexlet-products-store.vercel.app/ в Google Chrome
+      Открыт DevTools
     test-data: 
        Девайс = Galaxy Note 3
     steps:
@@ -258,8 +258,8 @@
     requirement: |
       Сайт не должен критично отличаться от веб-версии 
     prerequisites: |
-      - Открыт сайт https://hexlet-products-store.vercel.app/ в Google Chrome
-      - Открыт DevTools
+      Открыт сайт https://hexlet-products-store.vercel.app/ в Google Chrome
+      Открыт DevTools
     test-data: 
        Девайс = Galaxy S9+
     steps:
@@ -273,8 +273,8 @@
     requirement: |
       Сайт должен иметь мобильную версию
     prerequisites: |
-      - Открыт сайт Browser Stack https://live.browserstack.com/
-      - Пользователь авторизован на сайте Browser Stack
+      Открыт сайт Browser Stack https://live.browserstack.com/
+      Пользователь авторизован на сайте Browser Stack
     test-data: |
     steps:
       - Выбрать категории "iOS => iPhone => iPhone 12 => Нажать Safari"
@@ -337,9 +337,9 @@
     requirement: |
       Сайт должен быть совместим с последней версией браузера
     prerequisites: 
-      - Открыт сайт https://live.browserstack.com/
-      - Авторизация в Browser Stack выполнена
-      - Выбрано окружение - Mac (OS Ventura)
+      Открыт сайт https://live.browserstack.com/
+      Авторизация в Browser Stack выполнена
+      Выбрано окружение - Mac (OS Ventura)
     test-data: |
     steps:
       - Нажать на последнюю версию браузера "Firefox"
@@ -356,9 +356,9 @@
     requirement: |
       Сайт должен быть совместим с последней версией браузера
     prerequisites: 
-      - Открыт сайт https://live.browserstack.com/
-      - Авторизация в Browser Stack выполнена
-      - Выбрано окружение - Mac (OS Ventura)
+      Открыт сайт https://live.browserstack.com/
+      Авторизация в Browser Stack выполнена
+      Выбрано окружение - Mac (OS Ventura)
     test-data: |
     steps:
       - Нажать на последнюю версию браузера "Safari"
@@ -375,9 +375,9 @@
     requirement: |
       Сайт должен быть совместим с последней версией браузера
     prerequisites: 
-      - Открыт сайт https://live.browserstack.com/
-      - Авторизация в Browser Stack выполнена
-      - Выбрано окружение - Mac (Monterey)
+      Открыт сайт https://live.browserstack.com/
+      Авторизация в Browser Stack выполнена
+      Выбрано окружение - Mac (Monterey)
     test-data: |
     steps:
       - Нажать на последнюю версию браузера "Chrome"
@@ -394,9 +394,9 @@
     requirement: |
       Сайт должен быть совместим с последней версией браузера
     prerequisites: 
-      - Открыт сайт https://live.browserstack.com/
-      - Авторизация в Browser Stack выполнена
-      - Выбрано окружение - Windows 10
+      Открыт сайт https://live.browserstack.com/
+      Авторизация в Browser Stack выполнена
+      Выбрано окружение - Windows 10
     test-data: |
     steps:
       - Нажать на последнюю версию браузера "Yandex"
@@ -413,9 +413,9 @@
     requirement: |
       Сайт должен быть совместим с последней версией браузера
     prerequisites: 
-      - Открыт сайт https://live.browserstack.com/
-      - Авторизация в Browser Stack выполнена
-      - Выбрано окружение - Windows 10
+      Открыт сайт https://live.browserstack.com/
+      Авторизация в Browser Stack выполнена
+      Выбрано окружение - Windows 10
     test-data: |
     steps:
       - Нажать на последнюю версию браузера "Opera"
@@ -432,9 +432,9 @@
     requirement: |
       Сайт должен быть совместим с последней версией браузера
     prerequisites:
-      - Открыт сайт https://live.browserstack.com/
-      - Авторизация в Browser Stack выполнена
-      - Выбрано окружение - Windows 11
+      Открыт сайт https://live.browserstack.com/
+      Авторизация в Browser Stack выполнена
+      Выбрано окружение - Windows 11
     test-data: |
     steps:
       - Нажать на последнюю версию браузера "Edge"
@@ -451,9 +451,9 @@
     requirement: |
       Сайт должен быть совместим с последней версией браузера
     prerequisites: 
-      - Открыт сайт https://live.browserstack.com/
-      - Авторизация на сайте Browser Stack выполнена
-      - Выбрано окружение - Win 7
+      Открыт сайт https://live.browserstack.com/
+      Авторизация на сайте Browser Stack выполнена
+      Выбрано окружение - Win 7
     test-data: |
     steps:
       - Нажать на последнюю версию браузера "IE"
@@ -470,8 +470,8 @@
     requirement: |
       Пользователь может перемещаться по страницам списка с товарами
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/ 
-      - Язык - русский
+      Открыт сайт https://hexlet-products-store.vercel.app/ 
+      Язык - русский
     test-data: |
     steps: |
       Нажать "Следующий"
@@ -483,8 +483,8 @@
     requirement: |
       Пользователь может перемещаться по страницам списка с товарами
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/  на четвертой странице списка с товарами
-      - Язык - русский
+      Открыт сайт https://hexlet-products-store.vercel.app/  на четвертой странице списка с товарами
+      Язык - русский
     test-data: |
     steps: |
       Нажать "Предыдущая"
@@ -496,8 +496,8 @@
     requirement: |
       Пользователь может отфильтровать товар при нажатии на чекбокс
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/ 
-      - Язык - английский
+      Открыт сайт https://hexlet-products-store.vercel.app/ 
+      Язык - английский
     test-data: |
     steps: |
       Нажать чекбокс "Apple"
@@ -509,8 +509,8 @@
     requirement: |
       Пользователь может отфильтровать товар при нажатии на чекбокс
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/ 
-      - Язык - английский
+      Открыт сайт https://hexlet-products-store.vercel.app/ 
+      Язык - английский
     test-data: |
     steps: |
       - Нажать "Следующий"
@@ -523,8 +523,8 @@
     requirement: |
       Пользователь может отфильтровать товар при нажатии на чекбокс
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/ 
-      - Язык - английский
+      Открыт сайт https://hexlet-products-store.vercel.app/ 
+      Язык - английский
     test-data: |
     steps: |
       - Нажать "Следующий"
@@ -539,8 +539,8 @@
     requirement: |
       Товары после оформления заказа не должны находиться в корзине
     prerequisites: 
-      - В корзину добавлены два товара
-      - Открыт сайт https://hexlet-products-store.vercel.app/cart
+      В корзину добавлены два товара
+      Открыт сайт https://hexlet-products-store.vercel.app/cart
     test-data: 
       - Товар №1 = "iPhone 9"
       - Товар №2 = "iPhone X"
@@ -555,8 +555,8 @@
     requirement: |
       Пользователь может удалить товар из корзины
     prerequisites: 
-      - Открыт сайт https://hexlet-products-store.vercel.app/cart
-      - В корзину добавлены два товара
+      Открыт сайт https://hexlet-products-store.vercel.app/cart
+      В корзину добавлены два товара
     test-data: 
       - Товар №1 = "iPhone 9" 
       - Товар №2 = "iPhone X"
@@ -595,8 +595,8 @@
     requirement: |
       Пользователь может изменить версию сайта на английский язык 
     prerequisites: |
-      - Открыт сайт  https://hexlet-products-store.vercel.app/
-      - Интерфейс языка - русский
+      Открыт сайт  https://hexlet-products-store.vercel.app/
+      Интерфейс языка - русский
     test-data: |
     steps:
       - Нажать "Язык"
