@@ -77,7 +77,7 @@
   
 - summary: |
     Проверка сайта на уязвимость XSS-атак
-  status: pass
+  status: fail
   
 - summary: |
     Проверка работы сайта под нагрузкой 
