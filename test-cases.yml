@@ -1,79 +1,33 @@
 ---
   - summary: |
-      Успешный поиск товара на открытой странице по ключевому слову 
+      Проверка поиска по ключевому слову
     requirement: |
       Поиск осуществляется по списку товаров на развернутой странице
     prerequisites: 
       Открыт сайт https://hexlet-products-store.vercel.app/
       Язык интерфейса - английский
-      В списке товаров магазина есть товар с названием "laptop"
-    test-data: |
-       Ключевое слово = "laptop"
-    steps:
-      - В поле "Search" ввести "laptop"
-    expected-result: |
-        На экран выводятся все товары на странице, содержащие в названии слово "laptop"
-        
-  - summary: |
-      Успешный поиск товара на всех страницах по ключевому слову 
-    requirement: |
-      Поиск осуществляется по списку товаров со всех страниц
-    prerequisites: 
-      Открыт сайт https://hexlet-products-store.vercel.app/
-      Язык интерфейса - английский
-      В списке товаров магазина  есть товар с названием "bed"
+      В списке товаров магазина есть товар с названием "Bed"
     test-data: |
        Ключевое слово = "Bed"
     steps:
       - В поле "Search" ввести "Bed"
     expected-result: |
-        На экран выводятся все товары магазина, содержащие в названии слово "Bed"
+        На экран выводятся все товары на странице, содержащие в названии слово "Bed"
 
   - summary: |
-      Успешная фильтрация  товаров на странице по категории "smartphones" 
+      Проверка фильтра по категории
     requirement: |
       Фильтрация затрагивает товары только на открытой странице 
     prerequisites: 
       Открыт сайт https://hexlet-products-store.vercel.app/
       Язык интерфейса - анлглийский
     test-data: |
-      Категория = "smartphones"
+      Категория = любое значение  из выпадающего списка
     steps:
       - Нажать "Category"
-      - Нажать "Smartphones"
+      - Нажать на любую категорию из списка
     expected-result: |
-      На экран выводится список смартфонов со страницы
-      
-  - summary: |
-      Успешная фильтрация  товаров по категории "Skinscare"
-    requirement: |
-      Фильтрация затрагивает товары только на открытой странице 
-    prerequisites: 
-      Открыт сайт https://hexlet-products-store.vercel.app/
-      Язык интерфейса - анлглийский
-    test-data: |
-      Категория = "Skinсare"
-    steps:
-      - Нажать "Category"
-      - Нажать "Skinscare"
-    expected-result: |
-      На экран выводятся товары для ухода за кожей со страницы
-      
-  - summary: |
-      Успешная фильтрация  товаров по категории "tops"
-    requirement: |
-      Фильтрация затрагивает товары только на открытой странице  
-    prerequisites: 
-      Открыт сайт https://hexlet-products-store.vercel.app/
-      Язык интерфейса - анлглийский
-    test-data: |
-      Категория = "tops"
-    steps:
-      - Нажать "Следующая"
-      - Нажать "Category"
-      - Нажать "tops"
-    expected-result: |
-      На экран выводятся все футболки и майки со страницы
+      Оторбажаются товары в соответствии с выбранной категорией
     
   - summary: |
        Успешная фильтрация  товаров по цене  "От - До" с целыми числами
@@ -179,25 +133,10 @@
       - Нажать "Add to cart" в карточке товара
       - Нажать "Cart"
     expected-result: |
-      IPhone X добавлен в корзину
+      Товар отображается в корзине
       
   - summary: |
-      Проверка просмотра содержимого корзины
-    requirement: |
-      Пользователь может посмотреть список товаров в своей корзине 
-    prerequisites: 
-      Открыт сайт https://hexlet-products-store.vercel.app/
-      Язык интерфейса - английский 
-      В корзину добавлен товар "Iphone X"
-    test-data: |
-      "Сart" = корзина
-    steps: 
-      - Нажать "Cart"
-    expected-result: |
-      В корзине находится товар "IPhone X"
-      
-  - summary: |
-      Проверка детализации информации о товаре
+      Проверка открытия карточки товара
     requirement: |
       Пользователь может просмотреть товар и его описание в карточке товара
     prerequisites: 
@@ -207,97 +146,37 @@
     steps: 
       - Нажать на изображение товара
     expected-result: |
-      На экране выводится карточка товара с изображениями товара и описанием в заголовке "Description"
+      Открывается карточка товара с информацией о товаре
       
   - summary: |
-      Проверка адаптивности на Iphone 12 Pro
-    requirement: |
-      Сайт не должен критично отличаться от веб-версии 
-    prerequisites: |
-      Открыт сайт https://hexlet-products-store.vercel.app/ в Google Chrome
-      Открыт DevTools
-    test-data: |
-      Девайс = Iphone 12 Pro
-    steps:
-      - Нажать "Dimensions" 
-      - Нажать "Iphone 12 Pro"
-    expected-result: |
-      Сайт корректно отображает информацию и элементы сайта
-      
-  - summary: |
-      Проверка адаптивности на Ipad Pro
-    requirement: |
-      Сайт не должен критично отличаться от веб-версии 
-    prerequisites: |
-      Открыт сайт https://hexlet-products-store.vercel.app/ в Google Chrome
-      Открыт DevTools
-    test-data: |
-      Девайс = Ipad Pro
-    steps:
-      - Нажать "Dimensions"
-      - Нажать "Ipad Pro"
-    expected-result: |
-      Сайт корректно отображает информацию и элементы сайта
-      
-  - summary: |
-      Проверка адаптивности на Galaxy Note 3
-    requirement: |
-      Сайт не должен критично отличаться от веб-версии 
-    prerequisites: |
-      Открыт сайт https://hexlet-products-store.vercel.app/ в Google Chrome
-      Открыт DevTools
-    test-data: 
-       Девайс = Galaxy Note 3
-    steps:
-      - Нажать "Dimensions" 
-      - Нажать "Galaxy Note 3"
-    expected-result: |
-      Сайт корректно отображает информацию и элементы сайта
-      
-  - summary: |
-      Проверка адаптивности на Galaxy S9+
-    requirement: |
-      Сайт не должен критично отличаться от веб-версии 
-    prerequisites: |
-      Открыт сайт https://hexlet-products-store.vercel.app/ в Google Chrome
-      Открыт DevTools
-    test-data: 
-       Девайс = Galaxy S9+
-    steps:
-      - Нажать  "Dimensions" 
-      - Выбрать "Galaxy S9+"
-    expected-result: |
-      Сайт корректно отображает информацию и элементы сайта
-      
-  - summary: |
-      Провекрка на наличие мобильной версии
+      Проверка на наличие мобильной версии
     requirement: |
       Сайт должен иметь мобильную версию
     prerequisites: |
-      Открыт сайт Browser Stack https://live.browserstack.com/
-      Пользователь авторизован на сайте Browser Stack
+      Открыт сайт https://hexlet-products-store.vercel.app/
+      Открыт DevTools
     test-data: |
-      Девайс "Iphone 12"
+      Девайсы для проверки =  Iphone 12, Ipad Pro, Samsug Galaxy S9+
     steps:
-      - Выбрать категории "iOS => iPhone => iPhone 12 => Нажать Safari"
-      - Ввести https://hexlet-products-store.vercel.app/ в адресную строку Browser Stack
-      - Нажать "Enter"
+      - Выбрать девайс
+      - Проскроллить страницу вниз
+      - Нажать "Cart" в хэдере  
     expected-result: |
       На экран выводится корректно сверстанный сайт, функциональность основных кнопок работает
       
   - summary: |
-      Проверка сайта на использование протокола HTTPS
+      Проверка сайта на уязвимость SQL - инъекций
     requirement: |
-      Сайт должен подключаться через протокол HTTPS
+      Сайт должен быть неуязвим для SQL - инъекций
     prerequisites: 
-      Открыт сайт https://hexlet-products-store.vercel.app/  в Mozilla Firefox
+      Открыт сайт https://hexlet-products-store.vercel.app/ 
     test-data: |
-      HTTPS
+      Запрос SQL = SELECT * FROM users WHERE username=’a’ OR 1=1;--’ and password=’RandomPass’;
     steps:
-      - Нажать "ЗамОк" рядом с адресной строкой
-      - Нажать "Защищенное соединение"
+      - Вести запрос в поле "Search"
+      - Нажать Enter
     expected-result: |
-      Адрес сайта начинается с "https://", и выводится информация "Вы подключились к этому сайту по защищенному соединению" 
+      Запрос автоматически удаляется из поля "Search" 
       
   - summary: |
       Проверка сайта на уязвимость XSS-атак
@@ -336,7 +215,7 @@
       Значение колонки "Average" в "Summary Report" не более 5000 (мс)
       
   - summary: | 
-      Проверка работы сайта в браузере "Firefox" 
+      Проверка открытия в разных браузерах 
     requirement: |
       Сайт должен быть совместим с последней версией браузера
     prerequisites: 
@@ -344,129 +223,9 @@
       Авторизация в Browser Stack выполнена
       Выбрано окружение - Mac (OS Ventura)
     test-data: |
-      Firefox
+      Браузеры = Safari, Opera, Chrome, Yandex, Firefox, Edge, Internet Explorer
     steps:
-      - Нажать на последнюю версию браузера "Firefox"
-      - Ввести URL приложения
-      - Нажать "ENTER"
-      - Проскроллить страницу
-      - Добавить любой товар в корзину
-      - Нажать "Cart"
-    expected-result: |
-      Приложение открылось, наполнение страницы корректно
-      
-  - summary: | 
-      Проверка работы сайта в браузере "Safari"
-    requirement: |
-      Сайт должен быть совместим с последней версией браузера
-    prerequisites: 
-      Открыт сайт https://live.browserstack.com/
-      Авторизация в Browser Stack выполнена
-      Выбрано окружение - Mac (OS Ventura)
-    test-data: |
-      Safari
-    steps:
-      - Нажать на последнюю версию браузера "Safari"
-      - Ввести URL приложения
-      - Нажать "ENTER"
-      - Проскроллить страницу
-      - Добавить любой товар в корзину
-      - Нажать "Cart"
-    expected-result: |
-      Приложение открылось, наполнение страницы корректно
-      
-  - summary: | 
-      Проверка работы сайта в браузере "Chrome"
-    requirement: |
-      Сайт должен быть совместим с последней версией браузера
-    prerequisites: 
-      Открыт сайт https://live.browserstack.com/
-      Авторизация в Browser Stack выполнена
-      Выбрано окружение - Mac (Monterey)
-    test-data: |
-      Chrome
-    steps:
-      - Нажать на последнюю версию браузера "Chrome"
-      - Ввести URL приложения
-      - Нажать "ENTER"
-      - Проскроллить страницу
-      - Добавить любой товар в корзину
-      - Нажать "Cart"
-    expected-result: |
-      Приложение открылось, наполнение страницы корректно
-      
-  - summary: | 
-      Проверка работы сайта в браузере "Yandex"
-    requirement: |
-      Сайт должен быть совместим с последней версией браузера
-    prerequisites: 
-      Открыт сайт https://live.browserstack.com/
-      Авторизация в Browser Stack выполнена
-      Выбрано окружение - Windows 10
-    test-data: |
-      Yandex
-    steps:
-      - Нажать на последнюю версию браузера "Yandex"
-      - Ввести URL приложения
-      - Нажать "ENTER"
-      - Проскроллить страницу
-      - Добавить любой товар в корзину
-      - Нажать "Cart"
-    expected-result: |
-      Приложение открылось, наполнение страницы корректно
-      
-  - summary: | 
-      Проверка работы сайта в браузере "Opera"
-    requirement: |
-      Сайт должен быть совместим с последней версией браузера
-    prerequisites: 
-      Открыт сайт https://live.browserstack.com/
-      Авторизация в Browser Stack выполнена
-      Выбрано окружение - Windows 10
-    test-data: |
-      Opera
-    steps:
-      - Нажать на последнюю версию браузера "Opera"
-      - Ввести URL приложения
-      - Нажать "ENTER"
-      - Проскроллить страницу
-      - Добавить любой товар в корзину
-      - Нажать "Cart"
-    expected-result: |
-      Приложение открылось, наполнение страницы корректно
-      
-  - summary: | 
-      Проверка работы сайта в браузере "Edge"
-    requirement: |
-      Сайт должен быть совместим с последней версией браузера
-    prerequisites:
-      Открыт сайт https://live.browserstack.com/
-      Авторизация в Browser Stack выполнена
-      Выбрано окружение - Windows 11
-    test-data: |
-      Edge
-    steps:
-      - Нажать на последнюю версию браузера "Edge"
-      - Ввести URL приложения
-      - Нажать "ENTER"
-      - Проскроллить страницу
-      - Добавить любой товар в корзину
-      - Нажать "Cart"
-    expected-result: |
-      Приложение открылось, наполнение страницы корректно
-      
-  - summary: | 
-      Проверка работы сайта в браузере "Internet Explorer" 
-    requirement: |
-      Сайт должен быть совместим с последней версией браузера
-    prerequisites: 
-      Открыт сайт https://live.browserstack.com/
-      Авторизация на сайте Browser Stack выполнена
-      Выбрано окружение - Win 7
-    test-data: |
-      IE
-    steps:
-      - Нажать на последнюю версию браузера "IE"
+      - Нажать на последнюю версию браузера 
       - Ввести URL приложения
       - Нажать "ENTER"
       - Проскроллить страницу
@@ -504,50 +263,18 @@
       Открыта третья страница с товарами 
       
   - summary: |
-      Проверка фильтрации товара по производителю Apple
+      Проверка фильтрации по производителю 
     requirement: |
       Пользователь может отфильтровать товар при нажатии на чекбокс
     prerequisites: 
       Открыт сайт https://hexlet-products-store.vercel.app/ 
       Язык - английский
     test-data: |
-      Чекбокс "Apple"
+      Производитель = любой из списка
     steps: 
-      - Нажать чекбокс "Apple"
+      - Выбрать производителя, например DADAWU
     expected-result: |
-      На страницу выведены все товары производителя "Apple" 
-      
-  - summary: |
-      Проверка фильтрации товара по производителю Rubber
-    requirement: |
-      Пользователь может отфильтровать товар при нажатии на чекбокс
-    prerequisites: 
-      Открыт сайт https://hexlet-products-store.vercel.app/ 
-      Язык - английский
-    test-data: |
-      Чекбокс "Rubber"
-    steps: 
-      - Нажать "Следующий"
-      - Нажать чекбокс "Rubber"
-    expected-result: |
-      На страницу выведены все товары производителя "Rubber" 
-      
-  - summary: |
-      Проверка фильтрации товара по производителю Dadawu
-    requirement: |
-      Пользователь может отфильтровать товар при нажатии на чекбокс
-    prerequisites: 
-      Открыт сайт https://hexlet-products-store.vercel.app/ 
-      Язык - английский
-    test-data: |
-      Чекбокс "Dadawu"
-    steps: 
-      - Нажать "Следующий"
-      - Нажать "Следующий"
-      - Нажать "Следующий"
-      - Нажать чекбокс "Dadawu"
-    expected-result: |
-      На страницу выведены все товары производителя "Dadawu" 
+      На страницу выведены все товары производителя      
       
   - summary: |
       Успешная очистка корзины после заказа
@@ -621,19 +348,6 @@
       - Нажать "English"
     expected-result: |
       Интерфейс сайта переключился на английский язык
-      
-  - summary: | 
-      Проверка конвертации "доллар" в "рубль" при изменении языка
-    requirement: |
-      При переключении языка на русский, цена должна отображаться в рублях 
-    prerequisites: |
-      Открыт сайт  https://hexlet-products-store.vercel.app/
-    test-data: |
-      Валюта
-    steps:
-      - Нажать "Language"
-      - Нажать "Russian"
-    expected-result: |
-      Цена товаров на странице отображается в рублях
+
       
       
