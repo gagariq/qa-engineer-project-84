@@ -367,7 +367,7 @@ bugreports:
     actual-result: |  
       В поле "Search" отображается запрос
       
- - summary: |
+  - summary: |
       Загрузка сайта при соединении 3G дольше 10 сек.
     environment: |
        Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
