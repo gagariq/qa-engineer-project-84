@@ -39,26 +39,6 @@ test-cases:
   - summary: |
       Проверка на наличие мобильной версии
     status: fail
- 
-  - summary: |
-      Проверка на уязвимость SQL-инъекций
-    status: fail
-  
-  - summary: |
-      Проверка на уязвимость XSS-атак
-    status: fail
-  
-  - summary: |
-      Проверка работы сайта при высокой посещаемости 
-    status: pass
-    
-  - summary: |
-      Проверка загрузки сайта при высокой скорости соединения
-    status: pass
-    
-  - summary: |
-      Проверка загрузки сайта при низкой скорости соединения
-    status: fail
   
   - summary: |
       Проверка открытия в разных браузерах 
@@ -343,45 +323,6 @@ bugreports:
     actual-result: |
       Кнопка не работает
       
-  - summary: |
-      Приложение не защищено от XSS-атак
-    environment: |
-      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
-      MacOS Ventura 13.0.1 
-    steps-to-reproduce: |
-      1. Ввести скрипт <script>alert(123)</script> в поле "Search"
-    expected-result: |
-      Скрипт автоматически удаляется из поля 
-    actual-result: |  
-      В поле "Search" отображается скрипт
-      
-  - summary: |
-      Приложение не защищено от SQL-инъекций
-    environment: |
-      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
-      MacOS Ventura 13.0.1 
-    steps-to-reproduce: |
-      1. Ввести запрос SELECT * FROM users WHERE username=’a’ OR 1=1;--’ and password=’RandomPass’; в поле "SEARCH"
-    expected-result: |
-      Запрос автоматически удаляется из поля "Search" 
-    actual-result: |  
-      В поле "Search" отображается запрос
-      
-  - summary: |
-      Загрузка сайта при соединении 3G дольше 10 сек.
-    environment: |
-      Mozila Firefox   113.0.2 (Официальная сборка) (64 бит)
-      MacOS Ventura 13.0.1 
-    steps-to-reproduce: |
-      1. Открыть DevTools
-      2. Отключить кэширование
-      3. Нажать "Сеть"
-      4. Выбрать скорость "3G(низкая скорость)"
-      5. Обновить страницу
-    expected-result: |
-      Значение поля "Завершено" менее 10 секунд
-    actual-result: |  
-      Значение поля "Завершено" более 10 секунд
       
       
       
